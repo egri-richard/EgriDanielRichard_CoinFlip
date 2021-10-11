@@ -1,1 +1,1 @@
-# EgriDanielRichard_CoinFlip
+# Coin Flippper app 
