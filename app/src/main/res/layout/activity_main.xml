@@ -6,13 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/heads"
+        android:id="@+id/coinPic"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/buttonHolder"
+        app:layout_constraintTop_toBottomOf="@+id/coinPic">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fej"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Iras"
+                />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dobasok: 0"
+        android:id="@+id/DobasokText"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHolder"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Gyozelem: 0"
+        android:id="@+id/GyozText"
+        app:layout_constraintTop_toBottomOf="@+id/DobasokText"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vereseg: 0"
+        android:id="@+id/VesztText"
+        app:layout_constraintTop_toBottomOf="@id/GyozText"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
