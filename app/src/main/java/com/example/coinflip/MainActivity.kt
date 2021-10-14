@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
 import kotlin.random.Random
 
@@ -33,8 +34,14 @@ class MainActivity : AppCompatActivity() {
             picNum = rnd.nextInt(2)
 
             when(picNum) {
-                0 -> imageView.setImageResource(R.drawable.heads)
-                1 -> imageView.setImageResource(R.drawable.tails)
+                0 -> {
+                    imageView.setImageResource(R.drawable.heads)
+                    Toast.makeText(this@MainActivity, "Fej", Toast.LENGTH_SHORT).show()
+                    }
+                1 -> {
+                    imageView.setImageResource(R.drawable.tails)
+                    Toast.makeText(this@MainActivity, "Iras", Toast.LENGTH_SHORT).show()
+                    }
             }
 
             if (betNum == picNum) numOfWin++
@@ -51,8 +58,14 @@ class MainActivity : AppCompatActivity() {
             picNum = rnd.nextInt(2)
 
             when(picNum) {
-                0 -> imageView.setImageResource(R.drawable.heads)
-                1 -> imageView.setImageResource(R.drawable.tails)
+                0 -> {
+                    imageView.setImageResource(R.drawable.heads)
+                    Toast.makeText(this@MainActivity, "Fej", Toast.LENGTH_SHORT).show()
+                    }
+                1 -> {
+                    imageView.setImageResource(R.drawable.tails)
+                    Toast.makeText(this@MainActivity, "Iras", Toast.LENGTH_SHORT).show()
+                    }
             }
 
             if (betNum == picNum) numOfWin++
