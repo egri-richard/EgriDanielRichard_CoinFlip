@@ -9,13 +9,13 @@ import org.w3c.dom.Text
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-    lateinit var imageView: ImageView
-    lateinit var dobasokText: TextView
-    lateinit var gyozText: TextView
-    lateinit var vesztText: TextView
-    lateinit var headsButton: Button
-    lateinit var tailsButton: Button
-    lateinit var rnd : Random
+    private lateinit var imageView: ImageView
+    private lateinit var dobasokText: TextView
+    private lateinit var gyozText: TextView
+    private lateinit var vesztText: TextView
+    private lateinit var headsButton: Button
+    private lateinit var tailsButton: Button
+    private lateinit var rnd : Random
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,9 +40,9 @@ class MainActivity : AppCompatActivity() {
             if (betNum == picNum) numOfWin++
             else numOfLose++
 
-            dobasokText.text = numOfThrow.toString()
-            gyozText.text = numOfWin.toString()
-            vesztText.text = numOfLose.toString()
+            dobasokText.text = "Dobasok: $numOfThrow"
+            gyozText.text = "Gyozelem: $numOfWin"
+            vesztText.text = "Vereseg: $numOfLose"
         }
 
         tailsButton.setOnClickListener {
@@ -58,20 +58,20 @@ class MainActivity : AppCompatActivity() {
             if (betNum == picNum) numOfWin++
             else numOfLose++
 
-            dobasokText.text = numOfThrow.toString()
-            gyozText.text = numOfWin.toString()
-            vesztText.text = numOfLose.toString()
+            dobasokText.text = "Dobasok: $numOfThrow"
+            gyozText.text = "Gyozelem: $numOfWin"
+            vesztText.text = "Vereseg: $numOfLose"
         }
 
         }
 
         private fun init() {
-            val imageView = findViewById<ImageView>(R.id.coinPic)
-            val dobasokText = findViewById<TextView>(R.id.DobasokText)
-            val gyozText = findViewById<TextView>(R.id.GyozText)
-            val vesztText = findViewById<TextView>(R.id.VesztText)
-            val headsButton = findViewById<Button>(R.id.headsButton)
-            val tailsButton= findViewById<Button>(R.id.tailsButton)
+            imageView = findViewById(R.id.coinPic)
+            dobasokText = findViewById(R.id.DobasokText)
+            gyozText = findViewById(R.id.GyozText)
+            vesztText = findViewById(R.id.VesztText)
+            headsButton = findViewById(R.id.headsButton)
+            tailsButton= findViewById(R.id.tailsButton)
 
             rnd = Random
         }
