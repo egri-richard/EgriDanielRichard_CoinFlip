@@ -24,6 +24,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/headsButton"
                 android:text="Fej"
                 />
 
@@ -31,6 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/tailsButton"
                 android:text="Iras"
                 />
 
@@ -43,6 +45,7 @@
         android:id="@+id/DobasokText"
         app:layout_constraintTop_toBottomOf="@+id/buttonHolder"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,6 +53,7 @@
         android:id="@+id/GyozText"
         app:layout_constraintTop_toBottomOf="@+id/DobasokText"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
